@@ -1,0 +1,12 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <h2><%= @task.details %></h2>
+  <% if @task.completed %>
+    <p><i class="far fa-check-square"></i> This task is completed!</p>
+  <% else %>
+    <p><i class="far fa-square"></i> This task is not yet completed!</h2>
+  <% end %>
+  <br><%= link_to "<i class='fas fa-undo'></i>".html_safe + " Back to list", index_path %><br>
+  <%= link_to "Edit task", edit_task_path(@task) %>
+
+</div>
